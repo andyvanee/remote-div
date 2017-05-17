@@ -1,8 +1,11 @@
 ### What is this for?
 
-This is for sites that are super-simple but require loading some page content independently of the rest.
+This is for sites that are super-simple but require loading some page content
+independently of the rest.
 
-Maybe one part loads slowly and it's dragging the rest of the page down with it. Maybe some boilerplate can be cached indefinitely and doesn't need to be downloaded on every page view.
+Maybe one part loads slowly and it's dragging the rest of the page down with
+it. Maybe some boilerplate can be cached indefinitely and doesn't need to be
+downloaded on every page view.
 
 ### Usage
 
@@ -21,7 +24,8 @@ It's that easy. This is what it does:
 
 ### Styling with CSS
 
-There a few lifecycle events that you can style in your css if you wish. Here's a starting point:
+There a few lifecycle events that you can style in your css if you wish.
+Here's a starting point:
 
     remote-div {
         display: block;
@@ -37,8 +41,12 @@ There a few lifecycle events that you can style in your css if you wish. Here's 
 
 #### This is dumb
 
-Yeah, there may be problems with client-side-includes… take it or leave it. It's just a tiny project I found useful once.
+Yeah, there may be problems with client-side-includes… take it or leave it.
+It's just a tiny project I found useful once.
 
 #### Are there JS lifecycle events?
 
-Not at the moment. I didn't have a need for them, but I can imagine they may be useful. Send a pull request if you are so inclined!
+Not at the moment. I didn't have a need for them, but I can imagine they may
+be useful. Send a pull request if you are so inclined!
+
+[Demo](https://andyvanee.github.io/remote-div/index.html)
