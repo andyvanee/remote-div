@@ -1,0 +1,74 @@
+remote-div {
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0 0 1em;
+    background-color: #f8f9fb;
+    border: 1px solid #f1f1f1;
+}
+
+remote-div[data-stage="loading"]:before {
+    content: 'loading';
+    color: #b44;
+}
+
+remote-div[data-stage="error"] {
+    background-color: #fef0f0;
+}
+
+remote-div[data-stage="error"]:before {
+    content: 'error loading content... on purpose!';
+    color: #b44;
+}
+
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0 1em;
+    max-width: 700px;
+}
+
+.about {
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0.5em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+code {
+    font-family: monospace;
+    font-size: 0.85em;
+    background-color: white;
+}
+
+pre {
+    padding: 0.5em 1em;
+    border: 1px solid #bbb;
+    background-color: white;
+}
+
+dt {
+    margin: 1em 0 0.25em;
+    font-weight: 500;
+}
+
+dd {
+    margin: 0.25em 0 0.25em 0.5em;
+}

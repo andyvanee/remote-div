@@ -1,0 +1,33 @@
+<h3 id="what-is-this-for-">What is this for?</h3>
+<p>This is for sites that are super-simple but require loading some page content independently of the rest.</p>
+<p>Maybe one part loads slowly and it&#39;s dragging the rest of the page down with it. Maybe some boilerplate can be cached indefinitely and doesn&#39;t need to be downloaded on every page view.</p>
+<h3 id="usage">Usage</h3>
+<pre><code>&lt;head&gt;
+    &lt;script src=&quot;remote-div.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;remote-div data-src=&quot;/partial-page.html&quot;&gt;
+&lt;/body&gt;
+</code></pre><p>It&#39;s that easy. This is what it does:</p>
+<ol>
+<li>Registers a new HTML element <code>registerElement(&#39;remote-div&#39;)</code></li>
+<li>Fetches the HTML document specified with the <code>data-src</code> attribute.</li>
+<li>Injects the HTML into the <code>remote-div</code></li>
+</ol>
+<h3 id="styling-with-css">Styling with CSS</h3>
+<p>There a few lifecycle events that you can style in your css if you wish. Here&#39;s a starting point:</p>
+<pre><code>remote-div {
+    display: block;
+}
+remote-div[data-stage=&quot;loading&quot;]:before {
+    content: &#39;Here comes your content!!!&#39;;
+}
+remote-div[data-stage=&quot;error&quot;]:before {
+    content: &#39;Oh no, your content failed to load :(&#39;;
+}
+</code></pre><h3 id="faq-s">FAQ&#39;s</h3>
+<h4 id="this-is-dumb">This is dumb</h4>
+<p>Yeah, there may be problems with client-side-includes… take it or leave it. It&#39;s just a tiny project I found useful once.</p>
+<h4 id="are-there-js-lifecycle-events-">Are there JS lifecycle events?</h4>
+<p>Not at the moment. I didn&#39;t have a need for them, but I can imagine they may be useful. Send a pull request if you are so inclined!</p>
+
